@@ -1,0 +1,29 @@
+// tablet and mobile
+@media (max-width: 64em) {
+  .d-none {
+    display: none;
+  }
+  .d-block {
+    display: block;
+  }
+
+  
+}
+
+@media (max-width: 63.9375em) {
+}
+
+// tablet
+@media (min-width: 46.25em) and (max-width: 64em) {
+}
+
+// mobile
+@media (max-width: 46.1875em) {
+  
+}
+
+// danh cho man hinh duoi 400px
+@media (max-width: 25em) {
+}
+@media (max-width: 20em) {
+}
