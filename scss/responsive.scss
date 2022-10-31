@@ -1,13 +1,70 @@
+// 1400px 
+@media (max-width: 87.5em) {
+  .primary-side-wrapper {
+    left: 3%;
+    width: 24rem;
+    max-height: 19.5rem;
+    padding: 1.25rem;
+}
+  
+}
+// ipad pro 1200px 
+@media (max-width: 75em) {
+  .header-top,
+  .navbar-block,
+  .full-menu-container,
+  .footer-content  {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .card-primary-list {
+    justify-content: center;
+  }
+  .card-primary {
+    margin: -24px 24px;
+}
+.primary-header {
+  top: 2%;
+}
+.card-secondary-list {
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 64px 40px;
+  padding: 0 20px;
+}
+.card-secondary {
+  width: 100%;
+  margin: auto;
+}
+  
+}
 // tablet and mobile
 @media (max-width: 64em) {
-  .d-none {
-    display: none;
-  }
-  .d-block {
-    display: block;
-  }
+  .card-secondary-list {
+    grid-template-columns: repeat(4, 1fr);
+}
+.primary-side-wrapper {
+  display: none;
+}
+.primary-heading {
+  font-size: 3rem;
+  line-height: 3.625rem;
+}
+.live-container {
+  flex-direction: column;
+}
+.live-video {
+  width: 100%;
+  order: 1;
+}
+.live-content {
+  width: 100%;
+  padding: 1.5rem;
+  order: 2;
+}  
+.primary-header {
+  width: 100%;
+}
 
-  
 }
 
 @media (max-width: 63.9375em) {
@@ -19,7 +76,105 @@
 
 // mobile
 @media (max-width: 46.1875em) {
+  .header-top__left-item:nth-child(n + 2 ),
+  .header-top__right-wether,
+  .header-top__right-icon:nth-child(n + 4),
+  .navbar-block{
+    display: none;
+  }
+  .line-wave-1 {
+    background-image: url('../images/wave3.png');
+    -webkit-transform: translateY(-0.75rem);
+  }
+  .header-logo {
+    padding: 0.75rem 0 2rem;
+}
+.live-container {
+  padding: 0;
+}
+.live-content {
+  padding: 1.25rem;
+}
+
+.hide-mb {
+  display: none;
+}
+.show-mb {
+  display: block;
+}
+.card-primary-block {
+
+  background: #da993c;
+}
+.card-primary-list {
+  margin-top: -100px;
+}
+.card-primary-list::before {
+  content: "";
+    background-image: url(../images/wave4.png);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 47px;
+}
+.primary-heading {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  margin-bottom: 0.625rem;
+}
+.card-primary {
+  margin: -5px 15px;
+  flex: 0 1 150px;
+  max-width: 150px;
+  height: 240px;
+}
+.card-primary::before, .card-primary::after, .card-primary__img {
+  width: 150px;
+  height: 240px;
+}
+.card-primary-select select {
+  width: 136px;
   
+}
+.card-secondary-list {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 24px;
+}
+.block-title {
+  font-size: 2.25rem;
+  line-height: 50px;
+}
+.contact-wrapper {
+  right: 1.5rem;
+}
+.block-primary .coating {
+  
+  background-image: linear-gradient(180deg, #a06623 0%, transparent 30%, #da993c 91%);
+}
+.header-logo {
+  justify-content: space-between;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.header-icon-mb {
+  color: #fff;
+  font-size: 1.25rem;
+}
+.footer {
+  padding: 1.875rem 0;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.footer-right {
+  margin-top: 1.25rem;
+}
+.block-secondary-wrapper {
+  padding: 30px 0;
+}
 }
 
 // danh cho man hinh duoi 400px

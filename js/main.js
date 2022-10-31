@@ -8,20 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // header
   var header = document.querySelector('#header');
 
-  // submenu
-  var subMenu = document.querySelector('.sub-menu-wrapper');
-
-  // navbar arrow 
-  var arrow = document.querySelector('.navbar-arrow');
-
-  // height fixed
-  var heightFixed = document.querySelector('.height-fixed');
-
-  // header
-  var prevScrollpos = window.pageYOffset;
-
-  // about
-  var aboutIcons = document.querySelectorAll('.about-minus')
+  // show menu pc
+  var fullMenu = document.querySelector('.full-menu')
+  var showFullMenu = document.querySelector('.js_showMenu')
 
   const app = {
     // su ly cac su kien
@@ -36,51 +25,28 @@ document.addEventListener("DOMContentLoaded", function () {
         };
       }
 
-      // 
-      if(header){
-        var extendsMenu = header.querySelectorAll('.header-extend-icon');
-        extendsMenu.forEach(function(a){
-          if(subMenu){
-            subMenu.style.top = header.clientHeight + 'px';
-            a.onclick = function(){
-              subMenu.classList.toggle('open');
-              if(widthDoc.clientWidth <= 980){
-                widthDoc.classList.toggle('hide');
-              }
+      // show menu pc
+      if(showFullMenu){
+        showFullMenu.onclick = function() {
+          if(fullMenu){
+            if(fullMenu.classList.contains('active')){
+              fullMenu.classList.remove('active')
+              widthDoc.style.overflow = 'auto'
+            } else {
+              fullMenu.classList.add('active')
+              widthDoc.style.overflow = 'hidden'
             }
+
+            
           }
-        });
-        
-        
-        if(heightFixed){
-          heightFixed.style.height = header.clientHeight + 'px';
         }
 
-      }
-
-
-      // arrow
-      if(arrow){
-        var navbarList = document.querySelector('.navbar-mb__list');
-        arrow.onclick = function(){
-          navbarList.scrollLeft += 100;
-        }
-      }
-
-      // about icon 
-      if(aboutIcons){
-        aboutIcons.forEach(function(index){
-          index.onclick = function(){
-            index.parentElement.parentElement.lastElementChild.classList.toggle('open');
-            if(index.parentElement.parentElement.lastElementChild.matches('.open')){
-              if(index.firstElementChild.getAttribute('class') == 'fas fa-plus'){
-                index.firstElementChild.setAttribute('class','fas fa-minus')
-              }
-            }else {
-              index.firstElementChild.setAttribute('class','fas fa-plus')
-            }
+        if(fullMenu){
+          fullMenu.querySelector('.close-full-menu').onclick = () => {
+            fullMenu.classList.remove('active')
+            widthDoc.style.overflow = 'auto'
           }
-        })
+        }
       }
 
       // hide cac element khi click ra ngoai
@@ -102,35 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
 
-    // sctoll header
-    scrollHeader: function () {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos && header) {
-        document.getElementById("header").style.top = "0";
-      } else {
-        document.getElementById("header").style.top = "-" + (header.clientHeight + 'px');
-      }
-      prevScrollpos = currentScrollPos;
-    },
-    // slider linh vuc hoat dong
-    sliderFiledActivity: function(){
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1.2,
-        spaceBetween: 5,
-        centeredSlides: false,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          type: "progressbar",
-        },
-        breakpoints: {
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 5,
-          },
-        },
-      });
-    },
     // slider cty thanh vien
     sliderCompany: function(){
       var swiper2 = new Swiper(".mySwiperCompa", {
@@ -157,8 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
       window.onscroll = function () {
         // scroll top
         _this.scrollFunc();
-        // sctoll header
-        _this.scrollHeader();
       };
     },
     // khoi tao function start
@@ -166,11 +101,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // su ly cac su kien
       this.handleEvent();
       // window scroll
-      this.windowScroll();
-      // slider linh vuc hoat dong
-      this.sliderFiledActivity();
+      this.windowScroll()
       // slider cty thanh vien
-      this.sliderCompany();
+      // this.sliderCompany();
     },
   };
 

@@ -4,7 +4,7 @@
   bottom: 2rem;
   width: 2.5rem;
   height: 2.5rem;
-  background: #b2006a;
+  background: #993333;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,4 +18,26 @@
   -o-transition: all 0.6s;
   user-select: none;
   z-index: 1000;
+}
+.footer {
+  padding: 1.25rem 0;
+}
+.footer-content  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-left {
+  font-size: 13px;
+  line-height: 1.25rem;
+}
+.footer-right {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.footer-logo {
+  height: 1.875rem;
+  width: auto;
+  margin-left: 0.625rem;
 }
