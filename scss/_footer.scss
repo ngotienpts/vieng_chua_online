@@ -41,3 +41,13 @@
   width: auto;
   margin-left: 0.625rem;
 }
+
+// detail footer
+.detail-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: calc(100% - var(--w-slide-detail));
+  z-index: 3;
+}

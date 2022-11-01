@@ -84,10 +84,6 @@
     -webkit-transform: translateY(-0.75rem);
   }
 
-  .header-logo {
-    padding: 0.75rem 0 2rem;
-  }
-
   .live-container {
     padding: 0;
   }
@@ -132,6 +128,8 @@
 
   .card-primary-select select {
     width: 136px;
+    height: 32px;
+    font-size: 14px;
   }
 
   .card-secondary-list {
@@ -153,6 +151,7 @@
   }
 
   .header-logo {
+    padding: 0.75rem 0 1.5rem;
     justify-content: space-between;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -180,6 +179,10 @@
 
   .block-secondary-wrapper {
     padding: 30px 0;
+  }
+
+  .logo-header {
+    height: 2.5rem;
   }
 }
 

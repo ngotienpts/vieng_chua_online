@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var fullMenu = document.querySelector('.full-menu')
   var showFullMenu = document.querySelector('.js_showMenu')
 
+  // show submenu
+  var submenu = document.querySelector('#sidebar');
+  var showSubs = document.querySelectorAll('.js_show_submenu')
+
   const app = {
     // su ly cac su kien
     handleEvent: function () {
@@ -49,6 +53,37 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
+      // submenu
+      if(showSubs){
+        showSubs.forEach(function(el,index){
+            el.onclick = () => {
+              if(submenu && submenu.matches('.active')){
+                submenu.classList.remove('active')
+              }else {
+                submenu.classList.add('active')
+              }
+            }
+        })
+
+        if(submenu){
+          submenu.querySelector('.js_close_sub').onclick = function(){
+            submenu.classList.remove('active')
+          }
+
+        }
+        
+      }
+      
+      if(submenu){
+        var menuItems = submenu.querySelectorAll('.js_show_drop_mb');
+        menuItems.forEach(function(item){
+          var parent = item.closest('.navbar-mb-cate-item')
+          item.onclick = () => {
+            parent.classList.toggle('active')
+          }
+        })
+      }
+
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {});
     },
@@ -68,24 +103,25 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
 
-    // slider cty thanh vien
-    sliderCompany: function(){
-      var swiper2 = new Swiper(".mySwiperCompa", {
-        slidesPerView: 2,
-        spaceBetween: 60,
-        slidesPerGroup: 1,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+    // slider detail cap 1
+    sliderDetailPeimary: function(){
+      var timelineSwiper = new Swiper ('.timeline .swiper-container', {
+        direction: 'vertical',
+        loop: false,
+        speed: 1600,
+        pagination: '.swiper-pagination',
+        paginationBulletRender: function (swiper, index, className) {
+          var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
+          return '<span class="' + className + '">' + year + '</span>';
         },
-        hideOnClick:true,
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
         breakpoints: {
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 98,
-            slidesPerGroup: 1,
-          },
-        },
+          768: {
+            direction: 'horizontal',
+          }
+        }
       });
     },
     // window scroll
@@ -102,8 +138,8 @@ document.addEventListener("DOMContentLoaded", function () {
       this.handleEvent();
       // window scroll
       this.windowScroll()
-      // slider cty thanh vien
-      // this.sliderCompany();
+      // slider detail cap 1
+      this.sliderDetailPeimary();
     },
   };
 
