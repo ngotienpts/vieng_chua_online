@@ -95,6 +95,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css"
     />
+    <link rel="stylesheet" href="./slick/slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./slick/slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
     <script src="./jquery/jquery.js"></script>
@@ -103,20 +105,28 @@
   <body>
     <!-- header -->
     <div class="detail-header">
-        <!-- left -->
-        <div class="detail-header__left">
-            <img src="./images/bar_detail.svg" alt="" class="detail-header__left-item">
-            <div class="detail-header__left-item detail-header__left-volum">
-                <i class="fa-solid fa-volume-high"></i>
-            </div>
-            <a href="#" class="detail-header__left-item font-beVN fw-700 lh-24">Về trang chủ Chùa trực tuyến</a>
+      <!-- left -->
+      <div class="detail-header__left">
+        <img
+          src="./images/bar_detail.svg"
+          alt=""
+          class="detail-header__left-item"
+        />
+        <div class="detail-header__left-item detail-header__left-volum">
+          <i class="fa-solid fa-volume-high"></i>
         </div>
-        <!-- end left -->
-        <!-- center -->
-        <div class="detail-header__center">
-            <a href="#"><img src="./images/Logo.png" alt="" class="detail-logo"></a>
-        </div>
-        <!-- end center -->
+        <a href="#" class="detail-header__left-item font-beVN fw-700 lh-24"
+          >Về trang chủ Chùa trực tuyến</a
+        >
+      </div>
+      <!-- end left -->
+      <!-- center -->
+      <div class="detail-header__center">
+        <a href="#"
+          ><img src="./images/Logo.png" alt="" class="detail-logo"
+        /></a>
+      </div>
+      <!-- end center -->
     </div>
     <!-- end header -->
     <!-- partial:index.partial.html -->
@@ -126,41 +136,130 @@
           <div class="swiper-wrapper">
             <div
               class="swiper-slide"
-              style="background-image:url('./images/anh_phat.png');"
-               data-year="Ban Tứ đại Kim Cương"
+              style="background-image: url('./images/anh_phat.png')"
+              data-year="Ban Tứ đại Kim Cương"
             >
-              <div class="swiper-slide-content">
-                <div>
-                    <span class="timeline-year">Điện Thập Bát La Hán</span>
-                <h4 class="timeline-title">La Hán Thác Tháp</h4>
-                <p class="timeline-text">
-                    Tên của Ngài là Tô-tần-đà (Subinda). Thường ngày, Ngài tu tập rất tinh nghiêm, giúp người nhiệt tình nhưng ít thích nói chuyện. Tôn giả ít khi đi theo đức Phật ra ngoài, Ngài chỉ ở yên nơi tịnh xá đọc sách hoặc quét sân. Có người phê bình cách nói chuyện của Ngài không hay, đức Phật biết được an ủi:
-                    - Này Tô-tần-đà! Nói chuyện hay hoặc dở không liên quan gì đến vấn đề giác ngộ. Mọi người chỉ cần y theo lời ta dạy mà thực hành, dù không nói câu nào cũng thành tựu sự giải thoát.
-                    Đúng thật là Tôn giả hiếm khi lãng phí thời gian vào việc tán gẫu, chỉ dành trọn thời gian tọa thiền nên chứng quả A-la-hán rất sớm.
-                    Đương thời vua nước Án-đạt-la muốn xây dựng một tịnh xá u tịch tại núi Hắc Phong, nhưng tìm không ra những tảng đá lớn. Tôn giả chỉ cần vận thần thông trong một đêm, mang đến vô số đá rất lớn từ bên kia sông Hằng. 
-                </p>
+              <div class="swiper-slide-container">
+                <div class="swiper-slide-list carousel">
+                  <!-- item -->
+                  <div class="swiper-slide-item">
+                    <div class="swiper-slide-content">
+                      <span class="timeline-year">Điện Thập Bát La Hán</span>
+                      <h4 class="timeline-title">La Hán Thác Tháp</h4>
+                      <p class="timeline-text">
+                        Bên lề hành lang Quốc hội sáng 2/11, ông Trần Văn Lâm,
+                        Uỷ viên Uỷ ban Tài chính ngân sách, nhìn nhận đây là
+                        hiện tượng bất thường. Ông cho rằng, ngay cả khi nguồn
+                        cung thế giới lên cao, giá tăng, xăng dầu khan hiếm cũng
+                        không có hiện tượng bất thường như hiện nay. "Giá dầu
+                        thế giới hiện tương đối ổn định, nhưng thị trường trong
+                        nước lại xảy ra những điều bất thường, phải làm rõ căn
+                        nguyên, lý do", ông Lâm nói.
+                      </p>
+                    </div>
+                    <!-- img -->
+                    <div class="card-secondary card-detail">
+                      <img
+                        src="./images/duc_phat.png"
+                        alt=""
+                        class="card-secondary__img"
+                      />
+                      <div class="coating"></div>
+                      <h3 class="card-secondary__title">Tụng kinh</h3>
+                    </div>
+                    <!-- end img -->
+                  </div>
+                  <!-- end item -->
+                  <!-- item -->
+                  <div class="swiper-slide-item">
+                    <div class="swiper-slide-content">
+                      <span class="timeline-year">Điện Thập Bát La Hán</span>
+                      <h4 class="timeline-title">La Hán Thác Tháp</h4>
+                      <p class="timeline-text">
+                        Tên của Ngài là Tô-tần-đà (Subinda). Thường ngày, Ngài
+                        tu tập rất tinh nghiêm, giúp người nhiệt tình nhưng ít
+                        thích nói chuyện. Tôn giả ít khi đi theo đức Phật ra
+                        ngoài, Ngài chỉ ở yên nơi tịnh xá đọc sách hoặc quét
+                        sân. Có người phê bình cách nói chuyện của Ngài không
+                        hay, đức Phật biết được an ủi: - Này Tô-tần-đà! Nói
+                        chuyện hay hoặc dở không liên quan gì đến vấn đề giác
+                        ngộ. Mọi người chỉ cần y theo lời ta dạy mà thực hành,
+                        dù không nói câu nào cũng thành tựu sự giải thoát. Đúng
+                        thật là Tôn giả hiếm khi lãng phí thời gian vào việc tán
+                        gẫu, chỉ dành trọn thời gian tọa thiền nên chứng quả
+                        A-la-hán rất sớm. Đương thời vua nước Án-đạt-la muốn xây
+                        dựng một tịnh xá u tịch tại núi Hắc Phong, nhưng tìm
+                        không ra những tảng đá lớn. Tôn giả chỉ cần vận thần
+                        thông trong một đêm, mang đến vô số đá rất lớn từ bên
+                        kia sông Hằng.
+                      </p>
+                    </div>
+                    <!-- img -->
+                    <div class="card-secondary card-detail">
+                      <img
+                        src="./images/duc_phat.png"
+                        alt=""
+                        class="card-secondary__img"
+                      />
+                      <div class="coating"></div>
+                      <h3 class="card-secondary__title">La-hán Thác Tháp
+                      </h3>
+                    </div>
+                    <!-- end img -->
+                  </div>
+                  <!-- end item -->
                 </div>
+                <!-- bai vong dang huong -->
+                <div class="swiper-slide-btn">
+                  <button class="swiper-slide-btn__item">
+                    <img
+                      src="./images/candle.png"
+                      alt=""
+                      class="swiper-slide-btn__img"
+                    />
+                    <span>Bái vọng</span>
+                  </button>
+                  <button class="swiper-slide-btn__item">
+                    <img
+                      src="./images/candle.png"
+                      alt=""
+                      class="swiper-slide-btn__img"
+                    />
+                    <span>Dâng hương</span>
+                  </button>
+                </div>
+                <!-- end bai vong dang huong -->
               </div>
             </div>
             <div
               class="swiper-slide"
-              style="background-image:url('./images/anh_phat2.png') ;"
-               data-year="Ban Thập điện Diêm Vương"
+              style="background-image: url('./images/anh_phat2.png')"
+              data-year="Ban Thập điện Diêm Vương"
             >
               <div class="swiper-slide-content">
                 <div>
-                    <span class="timeline-year">Điện Thập Bát La Hán</span>
-                <h4 class="timeline-title">La Hán Thác Tháp</h4>
-                <p class="timeline-text">
-                    Tên của Ngài là Tô-tần-đà (Subinda). Thường ngày, Ngài tu tập rất tinh nghiêm, giúp người nhiệt tình nhưng ít thích nói chuyện. Tôn giả ít khi đi theo đức Phật ra ngoài, Ngài chỉ ở yên nơi tịnh xá đọc sách hoặc quét sân. Có người phê bình cách nói chuyện của Ngài không hay, đức Phật biết được an ủi:
-                    - Này Tô-tần-đà! Nói chuyện hay hoặc dở không liên quan gì đến vấn đề giác ngộ. Mọi người chỉ cần y theo lời ta dạy mà thực hành, dù không nói câu nào cũng thành tựu sự giải thoát.
-                    Đúng thật là Tôn giả hiếm khi lãng phí thời gian vào việc tán gẫu, chỉ dành trọn thời gian tọa thiền nên chứng quả A-la-hán rất sớm.
-                    Đương thời vua nước Án-đạt-la muốn xây dựng một tịnh xá u tịch tại núi Hắc Phong, nhưng tìm không ra những tảng đá lớn. Tôn giả chỉ cần vận thần thông trong một đêm, mang đến vô số đá rất lớn từ bên kia sông Hằng. 
-                </p>
+                  <span class="timeline-year">Điện Thập Bát La Hán</span>
+                  <h4 class="timeline-title">La Hán Thác Tháp</h4>
+                  <p class="timeline-text">
+                    Tên của Ngài là Tô-tần-đà (Subinda). Thường ngày, Ngài tu
+                    tập rất tinh nghiêm, giúp người nhiệt tình nhưng ít thích
+                    nói chuyện. Tôn giả ít khi đi theo đức Phật ra ngoài, Ngài
+                    chỉ ở yên nơi tịnh xá đọc sách hoặc quét sân. Có người phê
+                    bình cách nói chuyện của Ngài không hay, đức Phật biết được
+                    an ủi: - Này Tô-tần-đà! Nói chuyện hay hoặc dở không liên
+                    quan gì đến vấn đề giác ngộ. Mọi người chỉ cần y theo lời ta
+                    dạy mà thực hành, dù không nói câu nào cũng thành tựu sự
+                    giải thoát. Đúng thật là Tôn giả hiếm khi lãng phí thời gian
+                    vào việc tán gẫu, chỉ dành trọn thời gian tọa thiền nên
+                    chứng quả A-la-hán rất sớm. Đương thời vua nước Án-đạt-la
+                    muốn xây dựng một tịnh xá u tịch tại núi Hắc Phong, nhưng
+                    tìm không ra những tảng đá lớn. Tôn giả chỉ cần vận thần
+                    thông trong một đêm, mang đến vô số đá rất lớn từ bên kia
+                    sông Hằng.
+                  </p>
                 </div>
               </div>
             </div>
-            
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
@@ -171,22 +270,22 @@
     <!-- partial -->
     <!-- footer -->
     <div class="detail-footer bg-maroon-6d footer">
-        <div class="footer-content font-secondary text-white w-1080">
-            <p class="footer-left">
-              @Mọi sự copy, sao chép từ Phatgiao.org.vn đều được hoan nghênh!
-            </p>
-            <div class="footer-right">
-              <p>Power by</p>
-              <a href="#"
-                ><img src="./images/Logo.png" alt="" class="footer-logo"
-              /></a>
-            </div>
-          </div>
+      <div class="footer-content font-secondary text-white w-1080">
+        <p class="footer-left">
+          @Mọi sự copy, sao chép từ Phatgiao.org.vn đều được hoan nghênh!
+        </p>
+        <div class="footer-right">
+          <p>Power by</p>
+          <a href="#"
+            ><img src="./images/Logo.png" alt="" class="footer-logo"
+          /></a>
+        </div>
+      </div>
     </div>
     <!-- end footer -->
     <script src="./font-awesome/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./slick/slick-1.8.1/slick/slick.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
