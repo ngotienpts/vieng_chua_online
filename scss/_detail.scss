@@ -131,6 +131,8 @@
     &::-webkit-scrollbar-thumb {
       background-color:#D9D9D9;
     }
+
+
   }
 
   .timeline .swiper-pagination-bullet {
@@ -289,6 +291,7 @@
   & .slick-next.slick-disabled,
   & .slick-prev.slick-disabled {
     background-color: rgba($color: #565656, $alpha: 0.4);
+    pointer-events: none;
   }
 
    & .slick-prev.slick-disabled:before, 
@@ -465,7 +468,10 @@
   }
 }
 
-
+.card-detail--mb,
+.pagination-detail-mb {
+  display: none;
+}
 
 
 

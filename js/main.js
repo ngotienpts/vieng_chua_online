@@ -22,6 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // show see more sild detail
   var moreSideDetail = document.querySelector('.see-more-right-detail')
 
+
+  // show pagination detail mob
+  var showPagiMb = document.querySelector('.pagination-detail-mb')
+
   const app = {
     // su ly cac su kien
     handleEvent: function () {
@@ -123,6 +127,17 @@ document.addEventListener("DOMContentLoaded", function () {
   
         }
       }
+
+      // show pagination detail mb
+      if(showPagiMb){
+        var paginMb = document.querySelector('.swiper-pagination')
+        var seePaginMb = document.querySelector('.see-more-right-detail')
+        showPagiMb.onclick = function(){
+          paginMb.classList.toggle('active')
+          seePaginMb.classList.toggle('active')
+        }
+      }
+
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {});
     },
@@ -161,46 +176,52 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
           768: {
             direction: "horizontal",
+            
           },
         },
       });
     },
     // slider detail cap 2
     sliderDetailSecondary: function () {
-      var $slider = $(".swiper-slide-list");
-
-      if ($slider.length) {
-        var currentSlide;
-        var slidesCount;
-        var sliderCounter = document.createElement("div");
-        sliderCounter.classList.add("slider__counter");
-
-        var updateSliderCounter = function (slick, currentIndex) {
-          currentSlide = slick.slickCurrentSlide() + 1;
-          slidesCount = slick.slideCount;
-          $(sliderCounter).text(currentSlide + "/" + slidesCount);
-        };
-
-        $slider.on("init", function (event, slick) {
-          $slider.append(sliderCounter);
-          updateSliderCounter(slick);
-        });
-
-        $slider.on("afterChange", function (event, slick, currentSlide) {
-          updateSliderCounter(slick, currentSlide);
-        });
-
-        $slider.slick({
-          dots: true,
-          infinite: false,
-          speed: 500,
-          fade: true,
-          cssEase: "linear",
-          arrows: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        });
-      }
+      var numSlick = 0;
+      // var $slider = $(".swiper-slide-list");
+      $('.swiper-slide-list').each( function() {
+        numSlick++;
+        if ($(this).addClass( 'slider-' + numSlick ).length) {
+          var currentSlide;
+          var slidesCount;
+          var sliderCounter = document.createElement("div");
+          sliderCounter.classList.add("slider__counter");
+  
+          var updateSliderCounter = function (slick, currentIndex) {
+            currentSlide = slick.slickCurrentSlide() + 1;
+            slidesCount = slick.slideCount;
+            $(sliderCounter).text(currentSlide + "/" + slidesCount);
+          };
+  
+          $(this).addClass( 'slider-' + numSlick ).on("init", function (event, slick) {
+            $(this).addClass( 'slider-' + numSlick ).append(sliderCounter);
+            updateSliderCounter(slick);
+          });
+  
+          $(this).addClass( 'slider-' + numSlick ).on("afterChange", function (event, slick, currentSlide) {
+            updateSliderCounter(slick, currentSlide);
+          });
+  
+          $(this).addClass( 'slider-' + numSlick ).slick({
+            dots: true,
+            infinite: false,
+            speed: 500,
+            fade: true,
+            cssEase: "linear",
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          });
+  
+        }
+         
+      })
     },
 
     // window scroll

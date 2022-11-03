@@ -272,11 +272,15 @@
   right: 0;
   width: calc(100% - var(--w-slide-detail));
   z-index: 2;
+}
+.detail-header-block {
   display: flex;
   align-items: center;
   padding: 30px 90px;
+
 }
-.detail-header__left {
+.detail-header__left,
+.detail-header__left-pc {
   display: flex;
   align-items: center;
 }
@@ -299,4 +303,7 @@
     top: 50%;
     left: 50%;
     transform: translate(calc(-50% + var(--w-slide-detail)/2),-50%);
+}
+.detail-header__left-mb {
+  display: none;
 }
