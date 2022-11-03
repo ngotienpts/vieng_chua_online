@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
   var submenu = document.querySelector("#sidebar");
   var showSubs = document.querySelectorAll(".js_show_submenu");
 
+  // show see more detail
+  var moreDetails = document.querySelectorAll('.see-more-detail');
+
+  // show see more sild detail
+  var moreSideDetail = document.querySelector('.see-more-right-detail')
+
   const app = {
     // su ly cac su kien
     handleEvent: function () {
@@ -80,6 +86,43 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
 
+
+      // see more detail
+      if(moreDetails) {
+        moreDetails.forEach(function(item){
+          var icon = item.firstElementChild
+          var changeTetx = item.lastElementChild
+          var text = item.parentElement.querySelector('.timeline-text')
+          item.onclick = function() {
+            icon.classList.toggle('rote180')
+            text.classList.toggle('scroll')
+  
+            if(text.classList.contains('scroll')){
+              changeTetx.textContent = 'Thu gọn'
+            }else {
+              changeTetx.textContent = 'Click để xem tiếp'
+            }
+          }
+        })
+      }
+
+      // see more side detail
+      if(moreSideDetail){
+        var iconS = moreSideDetail.firstElementChild
+        var changeTextS = moreSideDetail.lastElementChild
+        var textS = document.querySelector('.swiper-pagination')
+        moreSideDetail.onclick = function(){
+          iconS.classList.toggle('rote180')
+          textS.classList.toggle('full')
+
+          if(textS.classList.contains('full')){
+            changeTextS.textContent = 'Thu gọn'
+          }else {
+            changeTextS.textContent = 'Xem tiếp'
+          }
+  
+        }
+      }
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {});
     },

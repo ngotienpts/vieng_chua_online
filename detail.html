@@ -103,6 +103,135 @@
   </head>
 
   <body>
+    <!-- submenu -->
+    <nav id="sidebar" class="" style="position: fixed">
+      <div class="navbar-mb-header">
+        <span class="navbar-mb-header__close js_close_sub">
+          <i class="fa fa-times"></i>
+        </span>
+        <div class="navbar-mb-header__logo">
+          <a href="/" title="">
+            <img src="./images/Logo.png" alt="" class="navbar-mb-header__img" />
+          </a>
+        </div>
+      </div>
+
+      <div class="search-mb">
+        <form action="" method="">
+          <div class="search-mb-flex">
+            <div class="btn-search-mb"><i class="fa fa-search"></i></div>
+            <input type="hidden" name="mod" value="archive" />
+            <input type="hidden" name="act" value="search" />
+            <input
+              type="text"
+              class="form-search-mb"
+              name="search"
+              placeholder="Tìm kiếm"
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="navbar-mb-cate-title">Chuyên mục</div>
+
+      <ul class="navbar-mb-cate-list">
+        <li class="navbar-mb-cate-item">
+          <a href="#">Trang chủ</a>
+        </li>
+        <li class="navbar-mb-cate-item">
+          <div class="navbar-mb-cate-item__header">
+            <a href="#" class="navbar-mb-cate-item__title">Tin tức</a>
+            <div class="js_show_drop_mb">
+              <i class="fa fa-chevron-down navbar-mb-cate-item__icon"></i>
+            </div>
+          </div>
+          <ul class="navbar-mb-cate-item__list">
+            <li class="navbar-mb-cate-item__child">
+              <a href="#">Trong nước</a>
+            </li>
+            <li class="navbar-mb-cate-item__child">
+              <a href="#">Quốc tế</a>
+            </li>
+            <li class="navbar-mb-cate-item__child">
+              <a href="#">Tin Phật sự</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- end submenu -->
+    <!-- full menu  -->
+    <div class="full-menu">
+      <div class="w-1080 full-menu-container">
+        <h3 class="full-menu-heading">Tất cả chuyên mục</h3>
+        <span class="close-full-menu"><i class="fa fa-close"></i></span>
+        <div class="full-menu-block">
+          <div class="full-menu-scroll">
+            <ul class="full-menu-list">
+              <li class="full-menu-item">
+                <a href="#" class="full-menu-item__link">Chùa Việt</a>
+              </li>
+              <li class="full-menu-item">
+                <a href="#" class="full-menu-item__link">Phỏng vấn</a>
+              </li>
+              <li class="full-menu-item">
+                <a href="#" class="full-menu-item__link">Kinh Phật</a>
+                <ul class="full-menu-sub">
+                  <li class="full-menu-sub-item">
+                    <a href="#">Kinh Pháp cú</a>
+                  </li>
+                  <li class="full-menu-sub-item">
+                    <a href="#">Chú Đại bi</a>
+                  </li>
+                  <li class="full-menu-sub-item">
+                    <a href="#">Kinh Dược sư</a>
+                  </li>
+                  <li class="full-menu-sub-item">
+                    <a href="#">Kinh Địa Tạng</a>
+                  </li>
+                  <li class="full-menu-sub-item">
+                    <a href="#">Kinh A Di Đà</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="full-menu-item">
+                <a href="#" class="full-menu-item__link"
+                  >Phật giáo thường thức</a
+                >
+                <ul class="full-menu-sub">
+                  <li class="full-menu-sub-item">
+                    <a href="#">Hỏi - Đáp</a>
+                  </li>
+                  <li class="full-menu-sub-item">
+                    <a href="#">Kiến thức</a>
+                  </li>
+                  <li class="full-menu-sub-item">
+                    <a href="#">Hỏi đáp cùng Thầy Viên Minh</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="full-menu-item">
+                <a href="" class="full-menu-item__link"
+                  >Phật pháp và cuộc sống</a
+                >
+                <ul class="full-menu-sub">
+                  <li class="full-menu-sub-item">
+                    <a href="#">Gieo mầm thiện</a>
+                  </li>
+                  <li class="full-menu-sub-item">
+                    <a href="#">Góc nhìn Phật tử</a>
+                  </li>
+                  <li class="full-menu-sub-item">
+                    <a href="#">Phật giáo và người trẻ</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end full menu  -->
     <!-- header -->
     <div class="detail-header">
       <!-- left -->
@@ -110,7 +239,7 @@
         <img
           src="./images/bar_detail.svg"
           alt=""
-          class="detail-header__left-item"
+          class="detail-header__left-item js_showMenu"
         />
         <div class="detail-header__left-item detail-header__left-volum">
           <i class="fa-solid fa-volume-high"></i>
@@ -134,6 +263,7 @@
       <div class="timeline">
         <div class="swiper-container">
           <div class="swiper-wrapper">
+            <!-- swiper item -->
             <div
               class="swiper-slide"
               style="background-image: url('./images/anh_phat.png')"
@@ -156,6 +286,14 @@
                         nước lại xảy ra những điều bất thường, phải làm rõ căn
                         nguyên, lý do", ông Lâm nói.
                       </p>
+                      <button class="see-more-detail">
+                        <span class="see-more-detail__icon">
+                          <i class="fa-solid fa-angles-down"></i>
+                        </span>
+                        <span class="see-more-detail__text"
+                          >Click để xem tiếp</span
+                        >
+                      </button>
                     </div>
                     <!-- img -->
                     <div class="card-secondary card-detail">
@@ -193,6 +331,14 @@
                         thông trong một đêm, mang đến vô số đá rất lớn từ bên
                         kia sông Hằng.
                       </p>
+                      <button class="see-more-detail">
+                        <span class="see-more-detail__icon">
+                          <i class="fa-solid fa-angles-down"></i>
+                        </span>
+                        <span class="see-more-detail__text"
+                          >Click để xem tiếp</span
+                        >
+                      </button>
                     </div>
                     <!-- img -->
                     <div class="card-secondary card-detail">
@@ -202,8 +348,7 @@
                         class="card-secondary__img"
                       />
                       <div class="coating"></div>
-                      <h3 class="card-secondary__title">La-hán Thác Tháp
-                      </h3>
+                      <h3 class="card-secondary__title">La-hán Thác Tháp</h3>
                     </div>
                     <!-- end img -->
                   </div>
@@ -229,37 +374,140 @@
                   </button>
                 </div>
                 <!-- end bai vong dang huong -->
+                <!--  -->
+                <div class="swiper-slide-text">
+                  <a href="#" class="swiper-slide-text__home"
+                    ><i class="fa-solid fa-house"></i
+                  ></a>
+                  <h3 class="swiper-slide-text__title">Điện Thập Bát La Hán</h3>
+                </div>
+                <!--  -->
               </div>
             </div>
+            <!-- end swiper item -->
+
+            <!-- swiper item -->
             <div
               class="swiper-slide"
-              style="background-image: url('./images/anh_phat2.png')"
-              data-year="Ban Thập điện Diêm Vương"
+              style="background-image: url('./images/anh_phat.png')"
+              data-year="Ban Tứ đại Kim Cương"
             >
-              <div class="swiper-slide-content">
-                <div>
-                  <span class="timeline-year">Điện Thập Bát La Hán</span>
-                  <h4 class="timeline-title">La Hán Thác Tháp</h4>
-                  <p class="timeline-text">
-                    Tên của Ngài là Tô-tần-đà (Subinda). Thường ngày, Ngài tu
-                    tập rất tinh nghiêm, giúp người nhiệt tình nhưng ít thích
-                    nói chuyện. Tôn giả ít khi đi theo đức Phật ra ngoài, Ngài
-                    chỉ ở yên nơi tịnh xá đọc sách hoặc quét sân. Có người phê
-                    bình cách nói chuyện của Ngài không hay, đức Phật biết được
-                    an ủi: - Này Tô-tần-đà! Nói chuyện hay hoặc dở không liên
-                    quan gì đến vấn đề giác ngộ. Mọi người chỉ cần y theo lời ta
-                    dạy mà thực hành, dù không nói câu nào cũng thành tựu sự
-                    giải thoát. Đúng thật là Tôn giả hiếm khi lãng phí thời gian
-                    vào việc tán gẫu, chỉ dành trọn thời gian tọa thiền nên
-                    chứng quả A-la-hán rất sớm. Đương thời vua nước Án-đạt-la
-                    muốn xây dựng một tịnh xá u tịch tại núi Hắc Phong, nhưng
-                    tìm không ra những tảng đá lớn. Tôn giả chỉ cần vận thần
-                    thông trong một đêm, mang đến vô số đá rất lớn từ bên kia
-                    sông Hằng.
-                  </p>
+              <div class="swiper-slide-container">
+                <div class="swiper-slide-list carousel">
+                  <!-- item -->
+                  <div class="swiper-slide-item">
+                    <div class="swiper-slide-content">
+                      <span class="timeline-year">Điện Thập Bát La Hán</span>
+                      <h4 class="timeline-title">La Hán Thác Tháp</h4>
+                      <p class="timeline-text">
+                        Bên lề hành lang Quốc hội sáng 2/11, ông Trần Văn Lâm,
+                        Uỷ viên Uỷ ban Tài chính ngân sách, nhìn nhận đây là
+                        hiện tượng bất thường. Ông cho rằng, ngay cả khi nguồn
+                        cung thế giới lên cao, giá tăng, xăng dầu khan hiếm cũng
+                        không có hiện tượng bất thường như hiện nay. "Giá dầu
+                        thế giới hiện tương đối ổn định, nhưng thị trường trong
+                        nước lại xảy ra những điều bất thường, phải làm rõ căn
+                        nguyên, lý do", ông Lâm nói.
+                      </p>
+                      <button class="see-more-detail">
+                        <span class="see-more-detail__icon">
+                          <i class="fa-solid fa-angles-down"></i>
+                        </span>
+                        <span class="see-more-detail__text"
+                          >Click để xem tiếp</span
+                        >
+                      </button>
+                    </div>
+                    <!-- img -->
+                    <div class="card-secondary card-detail">
+                      <img
+                        src="./images/duc_phat.png"
+                        alt=""
+                        class="card-secondary__img"
+                      />
+                      <div class="coating"></div>
+                      <h3 class="card-secondary__title">Tụng kinh</h3>
+                    </div>
+                    <!-- end img -->
+                  </div>
+                  <!-- end item -->
+                  <!-- item -->
+                  <div class="swiper-slide-item">
+                    <div class="swiper-slide-content">
+                      <span class="timeline-year">Điện Thập Bát La Hán</span>
+                      <h4 class="timeline-title">La Hán Thác Tháp</h4>
+                      <p class="timeline-text">
+                        Tên của Ngài là Tô-tần-đà (Subinda). Thường ngày, Ngài
+                        tu tập rất tinh nghiêm, giúp người nhiệt tình nhưng ít
+                        thích nói chuyện. Tôn giả ít khi đi theo đức Phật ra
+                        ngoài, Ngài chỉ ở yên nơi tịnh xá đọc sách hoặc quét
+                        sân. Có người phê bình cách nói chuyện của Ngài không
+                        hay, đức Phật biết được an ủi: - Này Tô-tần-đà! Nói
+                        chuyện hay hoặc dở không liên quan gì đến vấn đề giác
+                        ngộ. Mọi người chỉ cần y theo lời ta dạy mà thực hành,
+                        dù không nói câu nào cũng thành tựu sự giải thoát. Đúng
+                        thật là Tôn giả hiếm khi lãng phí thời gian vào việc tán
+                        gẫu, chỉ dành trọn thời gian tọa thiền nên chứng quả
+                        A-la-hán rất sớm. Đương thời vua nước Án-đạt-la muốn xây
+                        dựng một tịnh xá u tịch tại núi Hắc Phong, nhưng tìm
+                        không ra những tảng đá lớn. Tôn giả chỉ cần vận thần
+                        thông trong một đêm, mang đến vô số đá rất lớn từ bên
+                        kia sông Hằng.
+                      </p>
+                      <button class="see-more-detail">
+                        <span class="see-more-detail__icon">
+                          <i class="fa-solid fa-angles-down"></i>
+                        </span>
+                        <span class="see-more-detail__text"
+                          >Click để xem tiếp</span
+                        >
+                      </button>
+                    </div>
+                    <!-- img -->
+                    <div class="card-secondary card-detail">
+                      <img
+                        src="./images/duc_phat.png"
+                        alt=""
+                        class="card-secondary__img"
+                      />
+                      <div class="coating"></div>
+                      <h3 class="card-secondary__title">La-hán Thác Tháp</h3>
+                    </div>
+                    <!-- end img -->
+                  </div>
+                  <!-- end item -->
                 </div>
+                <!-- bai vong dang huong -->
+                <div class="swiper-slide-btn">
+                  <button class="swiper-slide-btn__item">
+                    <img
+                      src="./images/candle.png"
+                      alt=""
+                      class="swiper-slide-btn__img"
+                    />
+                    <span>Bái vọng</span>
+                  </button>
+                  <button class="swiper-slide-btn__item">
+                    <img
+                      src="./images/candle.png"
+                      alt=""
+                      class="swiper-slide-btn__img"
+                    />
+                    <span>Dâng hương</span>
+                  </button>
+                </div>
+                <!-- end bai vong dang huong -->
+                <!--  -->
+                <div class="swiper-slide-text">
+                  <a href="#" class="swiper-slide-text__home"
+                    ><i class="fa-solid fa-house"></i
+                  ></a>
+                  <h3 class="swiper-slide-text__title">Điện Thập Bát La Hán</h3>
+                </div>
+                <!--  -->
               </div>
             </div>
+            <!-- end swiper item -->
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
@@ -268,6 +516,21 @@
       </div>
     </div>
     <!-- partial -->
+    <!-- quay ve trang chu -->
+    <div class="back-home">
+      <a href="#" class="back-home__link"
+        ><i class="fa-solid fa-house back-home__icon"></i> Quay về</a
+      >
+    </div>
+    <!-- end quay ve trang chu -->
+    <!-- xem tiep right detail -->
+    <button class="see-more-right-detail">
+      <span class="see-more-detail__icon">
+        <i class="fa-solid fa-angles-down"></i>
+      </span>
+      <span class="see-more-detail__text">Xem tiếp</span>
+    </button>
+    <!-- end xem tiep right detail -->
     <!-- footer -->
     <div class="detail-footer bg-maroon-6d footer">
       <div class="footer-content font-secondary text-white w-1080">
