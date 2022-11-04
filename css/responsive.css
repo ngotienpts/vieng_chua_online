@@ -5,6 +5,12 @@
     max-height: 19.5rem;
     padding: 1.25rem;
   }
+
+  .swiper-slide-text {
+    bottom: 100px;
+    right: auto;
+    left: 90px;
+  }
 }
 @media (max-width: 75em) {
   .header-top,
@@ -36,6 +42,29 @@
   .card-secondary {
     width: 100%;
     margin: auto;
+  }
+
+  .detail-header-block {
+    padding: 30px;
+  }
+
+  .card-detail {
+    flex: 0 1 300px;
+    max-width: 300px;
+    height: 600px;
+  }
+
+  .timeline .swiper-button-next,
+.timeline .swiper-button-prev {
+    right: 15%;
+  }
+
+  .timeline .swiper-slide-content {
+    width: 500px;
+  }
+
+  .card-detail {
+    left: 25%;
   }
 }
 @media (max-width: 64em) {
@@ -70,7 +99,38 @@
   .primary-header {
     width: 100%;
   }
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  .detail-header-block {
+    padding: 20px;
+  }
 
+  .swiper-slide-item {
+    width: calc(100% - var(--w-slide-detail)) !important;
+  }
+
+  .timeline .swiper-slide-content {
+    left: 20px;
+    width: 450px;
+  }
+
+  .carousel .slick-next {
+    right: 30px;
+  }
+
+  .carousel .slick-prev {
+    right: 80px;
+  }
+
+  .slider__counter {
+    right: 140px;
+  }
+
+  .card-detail {
+    left: 40%;
+  }
+}
+@media (max-width: 62em) {
   .back-home,
 .timeline .swiper-slide .timeline-year,
 .see-more-detail__img,
@@ -87,6 +147,8 @@
   .card-detail--mb {
     display: block;
     margin-top: -30px;
+    left: 0;
+    transform: none;
   }
 
   .detail-header {
@@ -113,6 +175,7 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 0;
+    padding: 20px;
   }
 
   .swiper-slide-container {
@@ -163,32 +226,20 @@
     color: #E5E5E5;
   }
 
-  .card-detail {
-    top: auto;
-    left: auto;
-    transform: none;
-    flex: 0 1 200px;
-    max-width: 200px;
-    height: 350px;
-  }
-
-  .card-detail::before, .card-detail::after, .card-detail .card-secondary__img {
-    width: 200px;
-    height: 350px;
-  }
-
   .timeline .swiper-slide-content {
     width: 100%;
     max-width: 100%;
     top: 100px;
     right: auto;
     transform: none;
+    left: 0;
   }
 
   .timeline .swiper-slide-active .timeline-text {
     padding: 16px;
     margin-top: -60px;
     text-align: left;
+    max-height: 26vh;
   }
 
   .see-more-detail {
@@ -234,9 +285,45 @@
     max-width: 185px;
   }
 
-  .timeline .swiper-pagination.active {
+  .pagination-detail-mb {
     display: block;
+    padding: 8px 16px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(247, 247, 247, 0.8);
+    border-bottom: 1px solid #6D1D1D;
+    background-color: #0A0A0A;
+  }
+
+  .timeline .swiper-pagination {
+    padding: 8.5rem 1rem;
+    display: none !important;
+  }
+
+  .timeline .swiper-pagination.active {
+    display: block !important;
     position: fixed;
+  }
+
+  .see-more-right-detail {
+    display: none;
+    right: auto;
+    left: 0;
+  }
+
+  .see-more-right-detail.active {
+    display: block;
+  }
+
+  .swiper-slide-item {
+    width: 100% !important;
+  }
+}
+@media (max-width: 48em) {
+  .card-detail--mb {
+    margin-top: -97px;
   }
 }
 @media (max-width: 46.1875em) {
@@ -353,6 +440,160 @@
     height: 2.5rem;
   }
 
+  .back-home,
+.timeline .swiper-slide .timeline-year,
+.see-more-detail__img,
+.card-detail--pc,
+.detail-header__left-pc {
+    display: none;
+  }
+
+  .swiper-button-next,
+.swiper-button-prev {
+    display: none !important;
+  }
+
+  .card-detail--mb {
+    display: block;
+    margin-top: -30px;
+  }
+
+  .detail-header {
+    width: 100%;
+  }
+
+  .detail-header-block {
+    padding: 8px 16px;
+    background: #171313;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e538;
+  }
+
+  .detail-footer {
+    width: 100%;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: 0;
+  }
+
+  .timeline .swiper-slide .timeline-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+
+  .swiper-slide-container {
+    background: #0A0A0A;
+  }
+
+  .carousel {
+    max-width: 100%;
+  }
+
+  .card-detail .card-secondary__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .detail-header {
+    justify-content: space-between;
+  }
+
+  .detail-logo {
+    height: 40px;
+    height: 40px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
+  .detail-header__left-item {
+    width: 24px;
+  }
+
+  .detail-header__left-item:last-child {
+    border-left: 1px solid #e5e5e533;
+    padding-left: 8px;
+  }
+
+  .detail-header__left-item + .detail-header__left-item {
+    margin-left: 8px;
+  }
+
+  .detail-header__left-mb {
+    display: flex;
+    align-items: center;
+  }
+
+  .detail-header__right {
+    color: #E5E5E5;
+  }
+
+  .timeline .swiper-slide-content {
+    width: 100%;
+    max-width: 100%;
+    top: 100px;
+    right: auto;
+    transform: none;
+  }
+
+  .timeline .swiper-slide-active .timeline-text {
+    padding: 16px;
+    margin-top: -60px;
+    text-align: left;
+  }
+
+  .see-more-detail {
+    padding: 10px 0;
+    margin: auto;
+  }
+
+  .swiper-slide-btn {
+    position: relative;
+    bottom: 84px;
+  }
+
+  .swiper-slide-text {
+    position: absolute;
+    bottom: 5px;
+    z-index: 30;
+    right: auto;
+    left: 0;
+    padding: 16px;
+  }
+
+  .swiper-slide-text .swiper-slide-text__home {
+    margin-right: 16px;
+    font-size: 20px;
+  }
+
+  .carousel .slick-next {
+    right: 16px;
+    bottom: -81px;
+  }
+
+  .carousel .slick-prev {
+    bottom: -81px;
+    right: 70px;
+  }
+
+  .slider__counter {
+    right: 120px;
+    bottom: -46px;
+  }
+
+  .swiper-slide-text .swiper-slide-text__title {
+    max-width: 185px;
+  }
+
+  .timeline .swiper-pagination.active {
+    display: block;
+    position: fixed;
+  }
+
   .pagination-detail-mb {
     display: block;
     padding: 8px 16px;
@@ -378,10 +619,32 @@
   .see-more-right-detail.active {
     display: block;
   }
+
+  .card-detail {
+    top: auto;
+    left: auto;
+    transform: none;
+    flex: 0 1 200px;
+    max-width: 200px;
+    height: 350px;
+  }
+
+  .card-detail::before, .card-detail::after, .card-detail .card-secondary__img {
+    width: 200px;
+    height: 350px;
+  }
 }
 @media (max-width: 23.4375em) {
   .timeline .swiper-slide-active .timeline-text {
     max-height: 120px;
+  }
+
+  .card-detail--mb {
+    margin-top: -60px;
+  }
+
+  .swiper-slide-btn {
+    bottom: 75px;
   }
 }
 
