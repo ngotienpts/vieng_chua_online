@@ -528,6 +528,73 @@
     margin-top: 2rem;
     
   }
+  .card-secondary-item {
+    position: relative;
+    
+  }
+  .card-secondary-item::before {
+    position: absolute;
+    content: '';
+    width: 300px;
+    height: 30px;
+    background-color: #FBD09E;
+    top: 50%;
+    transform: translateY(-50%);
+    
+  }
+  .card-secondary-item::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('../images/Rectangle.png');
+    width: 20px;
+    height: 30px;
+    background-repeat: no-repeat;
+    left: 120%;
+    z-index: 2;
+  }
+  .card-secondary-item:nth-child(1)::before{
+    width: 1000px;
+    right: -79px;
+  }
+  .card-secondary-item:nth-child(6)::before {
+    width: 30px;
+    height: 352px;
+    transform: none;
+    right: -31px;
+    top: 43%;
+    border-radius: 0 50px 50px 0;
+  }
+  .card-secondary-item:nth-child(13)::before {
+    width: 30px;
+    height: 352px;
+    transform: none;
+    right: auto;
+    left: -30px;
+    top: -110%;
+    border-radius: 50px 0 0 50px;
+  }
+  .card-secondary-item:nth-child(14)::before {
+    left: -80%;
+  }
+  .card-secondary-item:nth-child(6)::after,
+  .card-secondary-item:nth-child(12)::before,
+  .card-secondary-item:nth-child(12)::after,
+  .card-secondary-item:nth-child(18)::after {
+    content: none;
+  }
+  .card-secondary-item:nth-child(n + 6)::after {
+    transform: rotate(180deg);
+    margin-top: -15px;
+  }
+  .card-secondary-item:nth-child(n + 12)::after {
+    transform: rotate(360deg);
+  }
+  .card-secondary-item:nth-child(18)::before {
+    width: 1000px;
+
+  }
 .card-secondary {
   flex: 0 1 120px;
   max-width: 120px;
