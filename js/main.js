@@ -26,6 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // show pagination detail mob
   var showPagiMb = document.querySelector('.pagination-detail-mb')
 
+  // slider cate
+  var insideItems = document.querySelectorAll('.inside-left-primary__item');
+
+  // navbar arrow 
+  var arrow = document.querySelector('.navbar-arrow');
   const app = {
     // su ly cac su kien
     handleEvent: function () {
@@ -90,7 +95,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
 
-
+      // arrow
+      if(arrow){
+        var navbarList = document.querySelector('.navbar-mb__list');
+        arrow.onclick = function(){
+          navbarList.scrollLeft += 100;
+        }
+      }
       // see more detail
       if(moreDetails) {
         moreDetails.forEach(function(item){
@@ -138,6 +149,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
+
+      // show item cate
+      if(insideItems){
+        insideItems.forEach(function(item){
+          item.onclick = function(){
+            this.classList.toggle('active')
+          }
+        })
+      }
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {});
     },
@@ -223,7 +243,36 @@ document.addEventListener("DOMContentLoaded", function () {
          
       })
     },
+    //  // slider cate
+    sliderCate: function(){
+      insideItems.forEach(function(item,index){
+        var mySwiperCate = item.querySelector('.mySwiperSide')
+        var pagiIndex = item.querySelector('.swiper-pagination')
+        pagiIndex.classList.add(`swiper-pagination-${index}`)
 
+        var swiper = new Swiper(mySwiperCate, {
+          slidesPerView: 2,
+          grid: {
+            rows: 4,
+            fill: 'rows',
+          },
+          spaceBetween: 15,
+          pagination: {
+            el: `.swiper-pagination-${index}`,
+            clickable: true,
+          },
+          hideOnClick:true,
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 1,
+            },
+          },
+        });
+      })
+    },
     // window scroll
     windowScroll: function () {
       var _this = this;
@@ -242,6 +291,8 @@ document.addEventListener("DOMContentLoaded", function () {
       this.sliderDetailPeimary();
       // slider detail cap 2
       this.sliderDetailSecondary();
+      //  // slider cate
+      this.sliderCate();
     },
   };
 

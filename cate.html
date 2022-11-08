@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./images/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./images/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./images/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./images/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./images/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./images/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./images/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./images/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./images/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- end favicon -->
+    <title>Chùa Trực Tuyến</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Roboto+Slab:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./font-awesome/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <script src="./jquery/jquery.js"></script>
+  </head>
+
+  <body>
+    <!-- submenu -->
+    <nav id="sidebar" class="" style="position: fixed">
+      <div class="navbar-mb-header">
+        <span class="navbar-mb-header__close js_close_sub">
+          <i class="fa fa-times"></i>
+        </span>
+        <div class="navbar-mb-header__logo">
+          <a href="/" title="">
+            <img src="./images/Logo.png" alt="" class="navbar-mb-header__img" />
+          </a>
+        </div>
+      </div>
+
+      <div class="search-mb">
+        <form action="" method="">
+          <div class="search-mb-flex">
+            <div class="btn-search-mb"><i class="fa fa-search"></i></div>
+            <input type="hidden" name="mod" value="archive" />
+            <input type="hidden" name="act" value="search" />
+            <input
+              type="text"
+              class="form-search-mb"
+              name="search"
+              placeholder="Tìm kiếm"
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="navbar-mb-cate-title">Chuyên mục</div>
+
+      <ul class="navbar-mb-cate-list">
+        <li class="navbar-mb-cate-item">
+          <a href="#">Trang chủ</a>
+        </li>
+        <li class="navbar-mb-cate-item">
+          <div class="navbar-mb-cate-item__header">
+            <a href="#" class="navbar-mb-cate-item__title">Tin tức</a>
+            <div class="js_show_drop_mb">
+              <i class="fa fa-chevron-down navbar-mb-cate-item__icon"></i>
+            </div>
+          </div>
+          <ul class="navbar-mb-cate-item__list">
+            <li class="navbar-mb-cate-item__child">
+              <a href="#">Trong nước</a>
+            </li>
+            <li class="navbar-mb-cate-item__child">
+              <a href="#">Quốc tế</a>
+            </li>
+            <li class="navbar-mb-cate-item__child">
+              <a href="#">Tin Phật sự</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- end submenu -->
+    <!-- liên hệ -->
+    <div class="contact-wrapper">
+      <ul class="contact-block">
+        <li class="contact-item">
+          <div id="call-phone" class="call-phone">
+            <div class="call-phone__circle-fill"></div>
+            <div class="call-phone__circle-img">
+              <a href="tel:123-456-7890" class="contact-link contact-call">
+                <i class="fas fa-phone-alt icon-phone"></i>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="contact-item">
+          <a href="#" class="contact-link contact-fb">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li class="contact-item">
+          <a href="#" class="contact-link contact-twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- end liên hệ -->
+    <!-- header -->
+    <header id="header" class="header">
+      <div class="">
+        <!-- header top -->
+        <div class="header-top font-primary fs-12 w-1080">
+          <!-- left -->
+          <div class="header-top__left">
+            <p class="header-top__left-item">Thứ 6, 10/28/2022 10:25(GMT+7)</p>
+            <a class="header-top__left-item" href="#">phatgiao.org</a>
+            <a class="header-top__left-item" href="#">Chùa trực tuyến</a>
+          </div>
+          <!-- end left -->
+          <!-- right -->
+          <div class="header-top__right">
+            <a href="#" class="header-top__right-icon"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="#" class="header-top__right-icon"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="#" class="header-top__right-icon"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+
+            <div class="header-top__right-wether">Hà Nội 25*C / 61%</div>
+            <div class="header-top__right-icon">
+              <img src="./images/cloud.png" alt="" />
+            </div>
+            <div class="header-top__right-icon">
+              <img src="./images/user.png" alt="" />
+            </div>
+          </div>
+          <!-- end right -->
+        </div>
+        <!-- end header top -->
+        <!-- logo -->
+        <div class="header-logo">
+          <div class="show-mb header-icon-mb header-icon-bar js_show_submenu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <a href="#">
+            <img src="./images/Logo.png" alt="" class="logo-header" />
+          </a>
+          <div
+            class="show-mb header-icon-mb header-icon-search js_show_submenu"
+          >
+            <i class="fa-solid fa-search"></i>
+          </div>
+        </div>
+        <!-- end logo -->
+
+        <!-- navbar -->
+        <div class="navbar-block">
+          <ul class="navbar w-1080">
+            <li class="navbar-item active">
+              <a href="#">
+                <i class="fa-solid fa-house"></i>
+              </a>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="navbar-item__link">Tụng kinh</a>
+              <ul class="navbar-sub">
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="navbar-item__link">Tụng kinh</a>
+              <ul class="navbar-sub">
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="navbar-item__link">Tụng kinh</a>
+              <ul class="navbar-sub">
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="navbar-item__link">Tụng kinh</a>
+              <ul class="navbar-sub">
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="navbar-item__link">Tụng kinh</a>
+              <ul class="navbar-sub">
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="navbar-item__link">Tụng kinh</a>
+              <ul class="navbar-sub">
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+                <li class="navbar-sub__item">
+                  <a href="#" class="navbar-sub__item-link">tin 1</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-item js_showMenu">
+              <i class="fa-solid fa-bars"></i>
+            </li>
+          </ul>
+        </div>
+        <!-- end navbar -->
+        <!-- line sóng -->
+        <div class="line-wave-1"></div>
+        <!-- end line sóng -->
+      </div>
+    </header>
+    <!-- end header -->
+    <!-- main -->
+    <main id="main">
+      <!-- full menu  -->
+      <div class="full-menu">
+        <div class="w-1080 full-menu-container">
+          <h3 class="full-menu-heading">Tất cả chuyên mục</h3>
+          <span class="close-full-menu"><i class="fa fa-close"></i></span>
+          <div class="full-menu-block">
+            <div class="full-menu-scroll">
+              <ul class="full-menu-list">
+                <li class="full-menu-item">
+                  <a href="#" class="full-menu-item__link">Chùa Việt</a>
+                </li>
+                <li class="full-menu-item">
+                  <a href="#" class="full-menu-item__link">Phỏng vấn</a>
+                </li>
+                <li class="full-menu-item">
+                  <a href="#" class="full-menu-item__link">Kinh Phật</a>
+                  <ul class="full-menu-sub">
+                    <li class="full-menu-sub-item">
+                      <a href="#">Kinh Pháp cú</a>
+                    </li>
+                    <li class="full-menu-sub-item">
+                      <a href="#">Chú Đại bi</a>
+                    </li>
+                    <li class="full-menu-sub-item">
+                      <a href="#">Kinh Dược sư</a>
+                    </li>
+                    <li class="full-menu-sub-item">
+                      <a href="#">Kinh Địa Tạng</a>
+                    </li>
+                    <li class="full-menu-sub-item">
+                      <a href="#">Kinh A Di Đà</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="full-menu-item">
+                  <a href="#" class="full-menu-item__link"
+                    >Phật giáo thường thức</a
+                  >
+                  <ul class="full-menu-sub">
+                    <li class="full-menu-sub-item">
+                      <a href="#">Hỏi - Đáp</a>
+                    </li>
+                    <li class="full-menu-sub-item">
+                      <a href="#">Kiến thức</a>
+                    </li>
+                    <li class="full-menu-sub-item">
+                      <a href="#">Hỏi đáp cùng Thầy Viên Minh</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="full-menu-item">
+                  <a href="" class="full-menu-item__link"
+                    >Phật pháp và cuộc sống</a
+                  >
+                  <ul class="full-menu-sub">
+                    <li class="full-menu-sub-item">
+                      <a href="#">Gieo mầm thiện</a>
+                    </li>
+                    <li class="full-menu-sub-item">
+                      <a href="#">Góc nhìn Phật tử</a>
+                    </li>
+                    <li class="full-menu-sub-item">
+                      <a href="#">Phật giáo và người trẻ</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end full menu  -->
+      
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs-block">
+          <ul class="breadcrumbs breadcrumbs-pc w-1080">
+            <li class="breadcrumbs-item"><a href="#">Trang chủ</a></li>
+            <li class="breadcrumbs-item active"><a href="#">Đọc truyện phật giáo</a></li>
+          </ul>
+          <section class="navbar-mb">
+            <ul class="navbar-mb__list fs-14">
+              <li class="navbar-mb__item fs-16">
+                <a href="#" class="text-white"><i class="fas fa-house"></i></a>
+              </li>
+              <li class="navbar-mb__item">
+                <a href="#" class="text-white">Giới thiệu</a>
+              </li>
+              <li class="navbar-mb__item">
+                <a href="#" class="text-white">lãnh đạo</a>
+              </li>
+              <li class="navbar-mb__item">
+                <a href="#" class="text-white">Công ty thành viên</a>
+              </li>
+              <li class="navbar-mb__item">
+                <a href="#" class="text-white">Tin tức</a>
+              </li>
+              <li class="navbar-mb__item">
+                <a href="#" class="text-white">Liên hệ</a>
+              </li>
+            </ul>
+            <div class="navbar-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </section>
+      </div>
+      <!-- end breadcrumbs -->
+
+      <!-- wrapper -->
+      <div class="wrapper w-1140">
+        <!-- left -->
+        <div class="wrapper-left">
+            <div class="inside-left">
+                <!-- primary -->
+                <div class="inside-left-primary">
+                    <ul class="inside-left-primary__container">
+                        <li class="inside-left-primary__item">
+                            <h3 class="inside-left-primary__title">Tụng kinh</h3>
+                            <div class="inside-left-primary__side">
+                                <div class="swiper mySwiperSide">
+                                  <div class="swiper-wrapper swiper-wrapper__count">
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                   
+                                    
+                                  </div>
+                                </div>
+                                <!-- pagination -->
+                                <div class="swiper-pagination"></div>
+                                <!-- end pagination -->
+                              </div>
+                        </li>
+                        <li class="inside-left-primary__item">
+                            <h3 class="inside-left-primary__title">Niệm phật</h3>
+                            <div class="inside-left-primary__side">
+                                <div class="swiper mySwiperSide">
+                                  <div class="swiper-wrapper swiper-wrapper__count">
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                    <div class="mySwiperSide-item swiper-slide">
+                                      <a href="#" class="">tụng kinh 1</a>
+                                    </div>
+                                   
+                                    
+                                  </div>
+                                </div>
+                                <!-- pagination -->
+                                <div class="swiper-pagination"></div>
+                                <!-- end pagination -->
+                              </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end primary -->
+                <div class="ads-pc mt-20">
+                    <a href="#">
+                      <img src="./images/ads.png" alt="">
+                    </a>
+                  </div>
+            </div>
+        </div>
+        <!-- end left -->
+        <!-- right -->
+        <div class="wrapper-right">
+            <div class="inside-right">
+                <!-- container -->
+                <div class="inside-right__container">
+                    <!-- item -->
+                    <div class="inside-right__articles">
+                      <!-- img -->
+                      <div class="inside-right__img">
+                          <div class="">
+                          <div class="thumb-img border-10">
+                              <a href="#" class="thumb-item thumb-5x3">
+                              <img class="" src="./images/4.jpg" alt=""></a>
+                          </div>
+                          </div>
+                      </div>
+                      <!-- end img -->
+                      <!-- content -->
+                      <div class="inside-right__content">
+                          <h3 class="inside-right__heading">
+                            <a href="#" class="fw-500">Du lịch golf Việt Nam tiềm năng hút khách sau Covid-19</a>
+                          </h3>
+                          <p class="inside-right__public"><span class="fw-700">Sự kiện</span> | 1 giờ</p>
+                          <p class="inside-right__des">Tọa đàm “Bứt phá doanh thu cuối năm: Lối đi nào cho doanh nghiệp xuất nhập khẩu” phân tích về cơ hội phục hồi và phát triển hậu dịch.</p>
+                      </div>
+                      <!-- end content -->
+                    </div>
+                    <!-- end item -->
+                    <!-- item -->
+                    <div class="inside-right__articles">
+                      <!-- img -->
+                      <div class="inside-right__img">
+                          <div class="">
+                          <div class="thumb-img border-10">
+                              <a href="#" class="thumb-item thumb-5x3">
+                              <img class="" src="./images/4.jpg" alt=""></a>
+                          </div>
+                          </div>
+                      </div>
+                      <!-- end img -->
+                      <!-- content -->
+                      <div class="inside-right__content">
+                          <h3 class="inside-right__heading">
+                            <a href="#" class="fw-500">Du lịch golf Việt Nam tiềm năng hút khách sau Covid-19</a>
+                          </h3>
+                          <p class="inside-right__public"><span class="fw-700">Sự kiện</span> | 1 giờ</p>
+                          <p class="inside-right__des">Tọa đàm “Bứt phá doanh thu cuối năm: Lối đi nào cho doanh nghiệp xuất nhập khẩu” phân tích về cơ hội phục hồi và phát triển hậu dịch.</p>
+                      </div>
+                      <!-- end content -->
+                    </div>
+                    <!-- end item -->
+                    <!-- item -->
+                    <div class="inside-right__articles">
+                      <!-- img -->
+                      <div class="inside-right__img">
+                          <div class="">
+                          <div class="thumb-img border-10">
+                              <a href="#" class="thumb-item thumb-5x3">
+                              <img class="" src="./images/4.jpg" alt=""></a>
+                          </div>
+                          </div>
+                      </div>
+                      <!-- end img -->
+                      <!-- content -->
+                      <div class="inside-right__content">
+                          <h3 class="inside-right__heading">
+                            <a href="#" class="fw-500">Du lịch golf Việt Nam tiềm năng hút khách sau Covid-19</a>
+                          </h3>
+                          <p class="inside-right__public"><span class="fw-700">Sự kiện</span> | 1 giờ</p>
+                          <p class="inside-right__des">Tọa đàm “Bứt phá doanh thu cuối năm: Lối đi nào cho doanh nghiệp xuất nhập khẩu” phân tích về cơ hội phục hồi và phát triển hậu dịch.</p>
+                      </div>
+                      <!-- end content -->
+                    </div>
+                    <!-- end item -->
+                  </div>
+                  <!-- end container -->
+                  <!-- pagination -->
+                <div class="pagination-cate fs-14 d-lg-block d-none">
+                    <span class="next-page fw-700">Trang tiếp <i class="fas fa-angle-right ml-10"></i></span>
+                    <div class="pagination-right">
+                      <ul class="pagination">
+                        <li class="prev"><i class="fas fa-angle-left"></i></li>
+                        <li class="number">1</li>
+                        <li class="next"><i class="fas fa-angle-right"></i></li>
+                      </ul>
+                      <span class="total-pages font-helve">Trang 1/20</span>
+                    </div>
+                  </div>
+                  <!-- end pagination -->
+            </div>
+        </div>
+        <!-- end right -->
+      </div>
+      <!-- end wrapper -->
+
+      <!-- pattern -->
+      <div class="line-bottom">
+        <img src="./images/line.png" alt="">
+      </div>
+      <!-- pattern -->
+      
+    </main>
+    <!-- end main -->
+    <!-- footer -->
+    <footer id="footer" class="bg-maroon-6d footer">
+      <!-- back top -->
+      <div id="back-top"><i class="fas fa-arrow-up text-white"></i></div>
+      <!-- end back top -->
+      <div class="footer-content font-secondary text-white w-1080">
+        <p class="footer-left">
+          @Mọi sự copy, sao chép từ Phatgiao.org.vn đều được hoan nghênh!
+        </p>
+        <div class="footer-right">
+          <p>Power by</p>
+          <a href="#"
+            ><img src="./images/Logo.png" alt="" class="footer-logo"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <script src="./font-awesome/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/js/all.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
