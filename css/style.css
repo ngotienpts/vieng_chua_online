@@ -2954,62 +2954,25 @@ img {
     left: 90px;
   }
 }
-.burning-candle {
-  position: relative;
+.incensory {
+  display: none;
 }
 
-.candle {
-  width: 10px;
-  height: 20px;
-  background-color: #993333b3;
-  border-radius: 4px 4px 2px 2px;
+.img-smoke {
+  display: none;
 }
 
-.candle .fire {
-  background: rgba(243, 110, 21, 0.88);
-  width: 11px;
-  height: 17px;
+.img-incensory {
+  display: block;
+}
+
+canvas {
   position: absolute;
-  top: -20px;
-  border-radius: 100%;
-  box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.candle:nth-child(1) .fire {
-  left: 0;
-}
-
-.candle .fire:nth-child(1) {
-  -webkit-animation: fire 1s infinite;
-}
-
-.candle .fire:nth-child(2) {
-  -webkit-animation: fire 1.5s infinite;
-}
-
-.candle .fire:nth-child(3) {
-  -webkit-animation: fire 0.7s infinite;
-}
-
-.candle .fire:nth-child(4) {
-  -webkit-animation: fire 3s infinite;
-}
-
-/*------- CANDLE ANIMATION -------*/
-@keyframes fire {
-  0% {
-    background: rgba(235, 80, 34, 0.53);
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    background: rgba(254, 155, 97, 0.2);
-    transform: translateY(-20px) scale(0);
-  }
-  100% {
-    background: rgba(254, 177, 97, 0.1);
-    transform: translateY(0) scale(1);
-  }
-}
 #back-top {
   position: fixed;
   right: 1rem;

@@ -290,7 +290,7 @@
   }
 
   .swiper-slide-container {
-    background: #0A0A0A;
+    background: #0a0a0a;
   }
 
   .carousel {
@@ -334,7 +334,7 @@
   }
 
   .detail-header__right {
-    color: #E5E5E5;
+    color: #e5e5e5;
   }
 
   .timeline .swiper-slide-content {
@@ -361,6 +361,10 @@
   .swiper-slide-btn {
     position: relative;
     bottom: 84px;
+  }
+
+  .swiper-slide-btn.change-incensory.active {
+    bottom: 126px;
   }
 
   .swiper-slide-text {
@@ -404,8 +408,8 @@
     align-items: center;
     justify-content: space-between;
     color: rgba(247, 247, 247, 0.8);
-    border-bottom: 1px solid #6D1D1D;
-    background-color: #0A0A0A;
+    border-bottom: 1px solid #6d1d1d;
+    background-color: #0a0a0a;
   }
 
   .timeline .swiper-pagination {
@@ -516,7 +520,9 @@
     height: 240px;
   }
 
-  .card-primary::before, .card-primary::after, .card-primary__img {
+  .card-primary::before,
+.card-primary::after,
+.card-primary__img {
     width: 150px;
     height: 240px;
   }
@@ -625,7 +631,7 @@
   }
 
   .swiper-slide-container {
-    background: #0A0A0A;
+    background: #0a0a0a;
   }
 
   .carousel {
@@ -669,7 +675,7 @@
   }
 
   .detail-header__right {
-    color: #E5E5E5;
+    color: #e5e5e5;
   }
 
   .timeline .swiper-slide-content {
@@ -694,6 +700,10 @@
   .swiper-slide-btn {
     position: relative;
     bottom: 84px;
+  }
+
+  .swiper-slide-btn.change-incensory.active {
+    bottom: 126px;
   }
 
   .swiper-slide-text {
@@ -742,8 +752,8 @@
     align-items: center;
     justify-content: space-between;
     color: rgba(247, 247, 247, 0.8);
-    border-bottom: 1px solid #6D1D1D;
-    background-color: #0A0A0A;
+    border-bottom: 1px solid #6d1d1d;
+    background-color: #0a0a0a;
   }
 
   .timeline .swiper-pagination {
@@ -769,7 +779,9 @@
     height: 350px;
   }
 
-  .card-detail::before, .card-detail::after, .card-detail .card-secondary__img {
+  .card-detail::before,
+.card-detail::after,
+.card-detail .card-secondary__img {
     width: 200px;
     height: 350px;
   }
@@ -907,7 +919,7 @@
 
   .inside-right__articles {
     display: block;
-    border-color: #D2D2D2;
+    border-color: #d2d2d2;
   }
 
   .inside-right__des,

@@ -1,0 +1,22 @@
+.incensory {
+  display: none;
+}
+
+.smoke {
+  //   position: relative;
+  //   margin: auto;
+  //   width: 300px;
+  //   height: 500px;
+}
+.img-smoke {
+  display: none;
+}
+.img-incensory {
+  display: block;
+}
+canvas {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
