@@ -267,6 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showPagiMb.onclick = function () {
           paginMb.classList.toggle("active");
           seePaginMb.classList.toggle("active");
+          widthDoc.classList.toggle("hidden");
         };
       }
 
@@ -314,6 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
         direction: "vertical",
         loop: false,
         speed: 1600,
+        // autoHeight: true,
         pagination: ".swiper-pagination",
         paginationBulletRender: function (swiper, index, className) {
           var year = document
@@ -371,6 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
               infinite: false,
               speed: 500,
               fade: true,
+              // adaptiveHeight: true,
               cssEase: "linear",
               arrows: true,
               slidesToShow: 1,
@@ -409,6 +412,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     },
+    // pagination
+    paginationDetail: function () {
+      $(".detail-primary .swiper-pagination").click(function () {
+        $(this).removeClass("active");
+        $(".see-more-right-detail").removeClass("active");
+      });
+    },
     // window scroll
     windowScroll: function () {
       var _this = this;
@@ -429,6 +439,8 @@ document.addEventListener("DOMContentLoaded", function () {
       this.sliderDetailSecondary();
       //  // slider cate
       this.sliderCate();
+      // pagination
+      this.paginationDetail();
     },
   };
 
