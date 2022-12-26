@@ -1,0 +1,104 @@
+.pagoda-ol-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  & .pagoda-ol-primary-inner {
+    right: 0;
+    width: var(--w-slide-detail);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5rem;
+    z-index: 100;
+    background-color: #171313;
+    padding: 4.5rem 0;
+    overflow: hidden;
+    position: absolute;
+
+    & .slick-slide {
+      padding: 0 1rem;
+      cursor: pointer;
+    }
+    & .slick-current .pagoda-ol-primary-item::before {
+      content: "";
+      position: absolute;
+      left: -16px;
+      width: 4px;
+      height: 100%;
+      background-color: #6d1d1d;
+    }
+  }
+  & .pagoda-ol-primary-item {
+    margin: 15px 0;
+    color: rgba(247, 247, 247, 0.8);
+    position: relative;
+  }
+
+  & .pagoda-ol-secondary-item {
+    position: relative;
+  }
+  & .pagoda-ol-secondary-inner {
+    height: 100vh;
+  }
+  & .pagoda-ol-secondary-item::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #000 20%, transparent);
+  }
+
+  & .slick-next {
+    position: absolute;
+    background: rgba(237, 237, 242, 0.6);
+    width: 35px;
+    height: 104px;
+    border-radius: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 15%;
+    right: 12%;
+    top: calc(50% + 55px);
+    transition: 0.2s linear;
+    &:hover {
+      background-color: #ededf2;
+    }
+    &:before {
+      content: "\276F";
+      color: #000;
+      opacity: 1;
+    }
+  }
+
+  & .slick-prev {
+    position: absolute;
+    background: rgba(237, 237, 242, 0.6);
+    width: 35px;
+    height: 104px;
+    border-radius: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: calc(50% - 55px);
+    left: auto;
+    right: 12%;
+    transition: 0.2s linear;
+    z-index: 100;
+    &:hover {
+      background-color: #ededf2;
+    }
+    &:before {
+      content: "\276E";
+      color: #000;
+      opacity: 1;
+    }
+  }
+}
