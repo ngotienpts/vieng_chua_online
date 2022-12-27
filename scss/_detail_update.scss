@@ -1,13 +1,18 @@
+.detail-header__right,
+.pagoda-ol-container-mb {
+  display: none;
+}
 .pagoda-ol-container {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-
+  & .pagoda-ol-secondary {
+    width: calc(100% - var(--w-slide-detail));
+  }
   & .pagoda-ol-primary-inner {
     right: 0;
     width: var(--w-slide-detail);
     height: 100%;
-    display: flex;
     flex-direction: column;
     font-weight: 700;
     font-size: 18px;
@@ -18,6 +23,17 @@
     overflow: hidden;
     position: absolute;
 
+    &.full {
+      overflow: auto;
+    }
+    &::-webkit-scrollbar {
+      width: 3px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #d9d9d9;
+    }
     & .slick-slide {
       padding: 0 1rem;
       cursor: pointer;
@@ -36,9 +52,14 @@
     color: rgba(247, 247, 247, 0.8);
     position: relative;
   }
-
+  & .pagoda-ol-secondary-bg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
   & .pagoda-ol-secondary-item {
     position: relative;
+    height: 100vh;
   }
   & .pagoda-ol-secondary-inner {
     height: 100vh;
@@ -64,7 +85,7 @@
     align-items: center;
     justify-content: center;
     bottom: 15%;
-    right: 12%;
+    right: 5%;
     top: calc(50% + 55px);
     transition: 0.2s linear;
     &:hover {
@@ -89,7 +110,7 @@
     justify-content: center;
     top: calc(50% - 55px);
     left: auto;
-    right: 12%;
+    right: 5%;
     transition: 0.2s linear;
     z-index: 100;
     &:hover {
@@ -100,5 +121,275 @@
       color: #000;
       opacity: 1;
     }
+  }
+
+  & .mySwiperPagodaDetail {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    padding: 116px 0 116px 90px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  & .pagoda-ol-secondary-content {
+    position: absolute;
+    max-width: 670px;
+    text-align: left;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  & .pagoda-ol-secondary-img {
+    transform: translateY(0);
+    left: 60%;
+  }
+  & .timeline-year {
+    font-size: 32px;
+    color: #bdbdbd;
+    font-weight: 700;
+    display: block;
+    line-height: 2.75rem;
+    margin-bottom: 20px;
+  }
+
+  & .timeline-title {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 68px;
+    margin: 0 0 30px;
+    color: #eee34e;
+    margin-bottom: 2rem;
+  }
+
+  & .timeline-text {
+    font-size: 18px;
+    font-family: "Noto Serif", serif;
+    line-height: 36px;
+    color: #e5e5e5;
+    overflow: hidden;
+    max-height: 40vh;
+    padding-right: 15px;
+    &.scroll {
+      overflow: auto;
+    }
+    &::-webkit-scrollbar {
+      width: 3px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #d9d9d9;
+    }
+  }
+
+  & .swiper-slide-btn,
+  & .swiper-slide-text {
+    bottom: 0;
+    bottom: 114px;
+  }
+  & .swiper-slide-text {
+    right: 15%;
+  }
+
+  & .swiper-button-next,
+  & .swiper-button-prev {
+    right: 60px;
+    bottom: 110px;
+    top: auto;
+    z-index: 100;
+    width: 44px;
+    height: 44px;
+    background: #6d1d1d;
+    border-radius: 10px;
+    transition: 0.2s ease;
+  }
+  & .swiper-button-prev {
+    right: 120px;
+    left: auto;
+  }
+  & .swiper-button-next:after,
+  & .swiper-rtl .swiper-button-prev:after {
+    content: "\2192";
+    color: rgba(247, 247, 247, 0.8);
+    opacity: 1;
+    font-size: 22px;
+  }
+
+  & .swiper-button-prev:after,
+  & .swiper-rtl .swiper-button-next:after {
+    content: "\2190";
+    color: rgba(247, 247, 247, 0.8);
+    opacity: 1;
+    font-size: 22px;
+  }
+
+  & .swiper-button-next.swiper-button-disabled,
+  & .swiper-button-prev.swiper-button-disabled {
+    background-color: rgba(86, 86, 86, 0.4);
+    pointer-events: none;
+    opacity: 1;
+  }
+
+  & .swiper-pagination-fraction {
+    bottom: 121px;
+    left: -200px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 400;
+    color: #e5e5e5;
+    pointer-events: none;
+    line-height: 20px;
+    font-family: "Be Vietnam Pro", sans-serif;
+  }
+}
+.pagoda-ol-container-mb {
+  position: relative;
+  & .mySwiperDetailPagodaMb .swiper-button-next,
+  & .mySwiperDetailPagodaMb .swiper-button-prev {
+    display: flex !important;
+  }
+  & .swiper-button-next,
+  & .swiper-button-prev {
+    right: 20px;
+    bottom: 0;
+    top: auto;
+    z-index: 100;
+    width: 44px;
+    height: 44px;
+    background: #6d1d1d;
+    border-radius: 10px;
+    transition: 0.2s ease;
+  }
+  & .swiper-button-prev {
+    right: 70px;
+    left: auto;
+  }
+  & .swiper-button-next:after,
+  & .swiper-rtl .swiper-button-prev:after {
+    content: "\2192";
+    color: rgba(247, 247, 247, 0.8);
+    opacity: 1;
+    font-size: 22px;
+  }
+
+  & .swiper-button-prev:after,
+  & .swiper-rtl .swiper-button-next:after {
+    content: "\2190";
+    color: rgba(247, 247, 247, 0.8);
+    opacity: 1;
+    font-size: 22px;
+  }
+
+  & .swiper-button-next.swiper-button-disabled,
+  & .swiper-button-prev.swiper-button-disabled {
+    background-color: rgba(86, 86, 86, 0.4);
+    pointer-events: none;
+    opacity: 1;
+  }
+
+  & .swiper-pagination-fraction {
+    bottom: 10px;
+    left: -120px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e5e5e5;
+    pointer-events: none;
+    line-height: 20px;
+    font-family: "Be Vietnam Pro", sans-serif;
+  }
+  & .swiper-slide-text {
+    max-width: 240px;
+    bottom: 40px;
+  }
+  & .swiper-slide-btn {
+    position: relative;
+    bottom: 130px;
+
+    &.change-incensory.active {
+      bottom: 184px;
+      z-index: 0;
+    }
+  }
+  & .swiper-slide-btn.change-incensory.active ~ .swiper-slide-text {
+    bottom: 112px;
+  }
+  & .pagoda-ol-primary-mb {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    background: #0a0a0a;
+    padding: 100px 0 20px;
+    z-index: 40;
+    transition: all 0.3s ease-in-out;
+    &.active {
+      left: 0;
+    }
+    & .pagoda-ol-primary-inner {
+      height: 100%;
+      overflow: auto;
+    }
+    & .pagoda-ol-primary-item {
+      color: rgba(247, 247, 247, 0.8);
+      margin: 15px 0;
+      padding: 0 15px;
+      position: relative;
+      &.active {
+        color: #fff;
+      }
+      &.active::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background-color: #6d1d1d;
+      }
+    }
+  }
+
+  & .pagoda-ol-secondary-item-mb {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+.pagoda-ol-content-mb {
+  padding: 100px 16px;
+
+  & .timeline-title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 20px 0;
+    color: #eee34e;
+    font-weight: 700;
+  }
+
+  & .timeline-text {
+    font-size: 18px;
+    font-family: "Noto Serif", serif;
+    line-height: 36px;
+    color: #e5e5e5;
+    overflow: hidden;
+    max-height: 400px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+
+    &.scroll {
+      overflow: auto;
+      // max-height: auto;
+    }
+  }
+
+  & .see-more-detail {
+    margin-bottom: 100px;
   }
 }

@@ -35,6 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var incensoryBlock = document.querySelectorAll(".change-incensory");
   var smokes = document.querySelectorAll(".smoke");
 
+  // tab detail mb
+  var tabs = document.querySelectorAll(".tab-item");
+  var panes = document.querySelectorAll(".tab-pane");
+
   if (smokes) {
     smokes.forEach(function (item) {
       var canvas = item.querySelector(".canvas"),
@@ -247,7 +251,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (moreSideDetail) {
         var iconS = moreSideDetail.firstElementChild;
         var changeTextS = moreSideDetail.lastElementChild;
-        var textS = document.querySelector(".swiper-pagination");
+        var textS = document.querySelector(".pagoda-ol-primary-inner");
         moreSideDetail.onclick = function () {
           iconS.classList.toggle("rote180");
           textS.classList.toggle("full");
@@ -262,11 +266,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // show pagination detail mb
       if (showPagiMb) {
-        var paginMb = document.querySelector(".swiper-pagination");
-        var seePaginMb = document.querySelector(".see-more-right-detail");
+        var paginMb = document.querySelector(".pagoda-ol-primary-mb");
         showPagiMb.onclick = function () {
           paginMb.classList.toggle("active");
-          seePaginMb.classList.toggle("active");
           widthDoc.classList.toggle("hidden");
         };
       }
@@ -287,6 +289,28 @@ document.addEventListener("DOMContentLoaded", function () {
             el.querySelector(".swiper-slide-btn__item").style.display = "none";
             el.querySelector(".incensory").style.display = "block";
             el.classList.add("active");
+          };
+        });
+      }
+
+      // tab detail mb
+      if (tabs && panes) {
+        tabs.forEach((tab, index) => {
+          var pane = panes[index];
+
+          tab.onclick = function () {
+            document
+              .querySelector(".tab-item.active")
+              .classList.remove("active");
+            document
+              .querySelector(".tab-pane.active")
+              .classList.remove("active");
+            document
+              .querySelector(".pagoda-ol-primary-mb")
+              .classList.toggle("active");
+            widthDoc.classList.toggle("hidden");
+            this.classList.add("active");
+            pane.classList.add("active");
           };
         });
       }

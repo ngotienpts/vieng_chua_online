@@ -129,6 +129,10 @@
   .card-detail {
     left: 25%;
   }
+
+  .pagoda-ol-container .pagoda-ol-secondary-img {
+    display: none;
+  }
 }
 @media (max-width: 64em) {
   .card-secondary-list {
@@ -447,6 +451,20 @@
 
   .wrapper-right {
     margin-top: 30px;
+  }
+
+  .detail-header__right,
+.pagoda-ol-container-mb {
+    display: block;
+  }
+
+  .pagoda-ol-container,
+.pagoda-ol-secondary-img {
+    display: none;
+  }
+
+  .pagoda-ol-container-mb {
+    background-color: #0a0a0a;
   }
 }
 @media (max-width: 48em) {
